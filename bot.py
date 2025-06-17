@@ -17,7 +17,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def holdings(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    tickers = " ".join(context.args).upper().replace(" ", "").split(",")
+    raw_input = " ".join(context.args).upper()
+    tickers = [t.strip() for t in raw_input.split(",") if t.strip()]
     reply = ""
 
     for ticker in tickers:
@@ -32,12 +33,11 @@ async def holdings(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(reply or "No news found.", parse_mode="Markdown")
 
 
-
 # Run bot
 if __name__ == "__main__":
     app = ApplicationBuilder().token(TELEGRAM_BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("holdings", holdings))
-    print("🤖 Bot is running...")
+    print("Bot is running...")
     app.run_polling()
 

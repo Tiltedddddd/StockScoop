@@ -1,6 +1,3 @@
-import requests
-from config import NEWS_API_KEY
-
 
 def get_news_for_ticker(ticker):
     return [
