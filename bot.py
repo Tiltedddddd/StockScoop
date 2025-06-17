@@ -4,6 +4,7 @@ from config import TELEGRAM_BOT_TOKEN
 from news import get_news_for_ticker
 from logic import analyze_news
 
+from utils import is_valid_ticker
 
 # Start command handler
 
@@ -22,6 +23,10 @@ async def holdings(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply = ""
 
     for ticker in tickers:
+        if not is_valid_ticker(ticker):
+            reply += f"\nInvalid Ticker: *{ticker}*\n"
+            continue
+
         news = get_news_for_ticker(ticker)
         recommendation = analyze_news(news)
 
