@@ -1,0 +1,9 @@
+# secret stuff
+config.py
+
+# python junk stuff
+__pycache__/
+.venv/
+
+# IDE junk stuff
+.idea/
