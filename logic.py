@@ -18,7 +18,7 @@ def analyze_news(articles):
             "🟡 Neutral"
         )
 
-        summary.append(f"{sentiment} — [{article['title']}]({article.get('link', '')})")
+        summary.append(f"{sentiment} — [{article['title']}]({article.get('link', '')})\n")
 
     # Overall recommendation
     avg_score = total_score / len(articles) if articles else 0

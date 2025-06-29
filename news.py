@@ -16,7 +16,7 @@ def get_news_for_ticker(ticker):
         "millionaire", "next tesla", "explode", "hidden gem", "buy now",
         "must-buy", "could soar", "trillion-dollar", "1 stock", "unstoppable",
         "rule them all", "undervalued gem", "secret pick", "top stock to own",
-        "motley fool", "investorplace", "seeking alpha", "double your money"
+        "motley fool", "investorplace", "seeking alpha", "double your money", "fool"
     ]
 
     articles = []
@@ -28,8 +28,9 @@ def get_news_for_ticker(ticker):
             summary = entry.get("summary", "")
             combined_text = (title + " " + summary).upper()
 
-            # Skip if clickbait detected
-            if any(bad_word in combined_text.lower() for bad_word in CLICKBAIT_KEYWORDS):
+            # Skip if clickbait detected in title/summary or link
+            link = entry.link.lower()
+            if any(bad_word in combined_text.lower() for bad_word in CLICKBAIT_KEYWORDS) or "fool.com" in link:
                 continue
 
             # Add articles that only mention the ticker
