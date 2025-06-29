@@ -1,19 +1,32 @@
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+analyzer = SentimentIntensityAnalyzer()
+
+
 def analyze_news(articles):
-    # Rating numbers
-    rating = {"BUY": 0, "HOLD": 0, "SELL": 0}
+    total_score = 0
+    summary = []
 
     for article in articles:
-        # Combine title + desc and lowercase
-        text = (article.get("title", "") + " " + article.get("description", "")).lower()
+        text = f"{article.get('title', '')} {article.get('description', '')}"
+        score = analyzer.polarity_scores(text)["compound"]
+        total_score += score
 
-        # Scoring based on buzzwords lol
-        if any(word in text for word in ["beats expectations", "upgrade", "record revenue", "strong growth"]):
-            rating["BUY"] += 1
-        elif any(word in text for word in ["missed earnings", "downgrade", "lawsuit", "decline"]):
-            rating["SELL"] += 1
-        else:
-            rating["HOLD"] += 1
+        sentiment = (
+            "Positive" if score > 0.2 else
+            "Negative" if score < -0.2 else
+            "Neutral"
+        )
 
-    # Pick the most common rating
-    recommended_action = max(rating, key=rating.get)
-    return f"Recommended action: {recommended_action}"
+        summary.append(f"{sentiment} -- {article['title']}")
+
+    # Overall recommendation
+    avg_score = total_score / len(articles) if articles else 0
+    if avg_score > 0.2:
+        recommendation = "Overall: Bullish tone -- Signs of positive outlook"
+    elif avg_score < -0.2:
+        recommendation = "Overall: Bearish tone -- be cautious"
+    else:
+        recommendation = "Overall: Mixed/Neutral tone -- No clear direction yet"
+
+    return recommendation, summary
