@@ -10,7 +10,11 @@ from utils import is_valid_ticker, load_watchlist, save_watchlist
 # Start command handler
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "👋 Welcome to StockScoop!\nSend /holdings followed by your tickers (e.g. /holdings NVDA, SOFI)"
+        "👋 Welcome to StockScoop!\n\nUse the following commands:\n" 
+        "/holdings [TICKERS] — Get news summaries with sentiment (e.g. /holdings NVDA, SOFI)\n"
+        "/holdings --brief — Quick headlines only (uses saved tickers)\n"
+        "/save [TICKERS] — Save tickers to your watchlist\n"
+        "/watchlist — View your current saved tickers"
     )
 
 
