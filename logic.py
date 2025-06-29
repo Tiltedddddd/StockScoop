@@ -13,12 +13,12 @@ def analyze_news(articles):
         total_score += score
 
         sentiment = (
-            "Positive" if score > 0.2 else
-            "Negative" if score < -0.2 else
-            "Neutral"
+            "🟢 Positive" if score > 0.2 else
+            "🔴 Negative" if score < -0.2 else
+            "🟡 Neutral"
         )
 
-        summary.append(f"{sentiment} -- {article['title']}")
+        summary.append(f"{sentiment} — [{article['title']}]({article.get('link', '')})")
 
     # Overall recommendation
     avg_score = total_score / len(articles) if articles else 0

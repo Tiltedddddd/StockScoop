@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6028ab7-28a7-4a3d-b8f0-636299ecf202" name="Changes" comment="Upgraded news.py to use feedparser with live RSS feeds for ticker-based headlines. No longer using fake data for news.py.">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/stockScoop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e6028ab7-28a7-4a3d-b8f0-636299ecf202" name="Changes" comment="Upgraded logic.py to use VADER (Better sentiment analysis) Changed it to use new changes in bot.py and added vaderSentiment in requirements.txt">
+      <change afterPath="$PROJECT_DIR$/data/tickers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news.py" beforeDir="false" afterPath="$PROJECT_DIR$/news.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750262015264</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Upgraded logic.py to use VADER (Better sentiment analysis) Changed it to use new changes in bot.py and added vaderSentiment in requirements.txt">
+      <option name="closed" value="true" />
+      <created>1751188198622</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1751188198622</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,6 +228,7 @@
     <MESSAGE value="Made ticker validation better and more readable in bot.py. Added comments in logic.py, removed unused imports in news.py and installed yfinance" />
     <MESSAGE value="Created utils.py for function reusability. Added yfinance to validate ticker symbols with is_valid_ticker() function." />
     <MESSAGE value="Upgraded news.py to use feedparser with live RSS feeds for ticker-based headlines. No longer using fake data for news.py." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgraded news.py to use feedparser with live RSS feeds for ticker-based headlines. No longer using fake data for news.py." />
+    <MESSAGE value="Upgraded logic.py to use VADER (Better sentiment analysis) Changed it to use new changes in bot.py and added vaderSentiment in requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgraded logic.py to use VADER (Better sentiment analysis) Changed it to use new changes in bot.py and added vaderSentiment in requirements.txt" />
   </component>
 </project>
