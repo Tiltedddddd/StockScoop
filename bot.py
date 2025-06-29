@@ -82,11 +82,7 @@ async def watchlist(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(f"📊 Current watchlist: {', '.join(tickers)}")
 
 
-async def send_daily_update(app):
-    from utils import load_watchlist
-    from news import get_news_for_ticker
-    from logic import analyze_news
-
+async def send_daily_update(bot):
     user_id = 1609231367
     tickers = load_watchlist()
 
@@ -103,10 +99,9 @@ async def send_daily_update(app):
         reply += f"\n\n💡 {recommendation}\n"
 
     try:
-        await app.bot.send_message(chat_id=user_id, text=reply, parse_mode="Markdown", disable_web_page_preview=True)
+        await bot.send_message(chat_id=user_id, text=reply, parse_mode="Markdown", disable_web_page_preview=True)
     except Exception as e:
         print(f"[Scheduler Error] {e}")
-
 
 # Run bot
 if __name__ == "__main__":
@@ -120,7 +115,7 @@ if __name__ == "__main__":
     scheduler = BackgroundScheduler()
 
     # Run daily at 8AM
-    scheduler.add_job(lambda: asyncio.run(send_daily_update(app)), "cron", hour=7, minute=0)
+    scheduler.add_job(lambda: asyncio.run(send_daily_update(app.bot)), "cron", hour=7) # type: ignore
 
     scheduler.start()
     print("Scheduler started...")
