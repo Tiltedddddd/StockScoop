@@ -7,6 +7,13 @@ import os
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
 
 
+# fallback to local config if available
+if not TELEGRAM_BOT_TOKEN:
+    try:
+        from config import TELEGRAM_BOT_TOKEN
+    except ImportError:
+        raise RuntimeError("TELEGRAM_BOT_TOKEN not set in environment or config.py")
+
 from news import get_news_for_ticker
 from logic import analyze_news
 from utils import is_valid_ticker, load_watchlist, save_watchlist
