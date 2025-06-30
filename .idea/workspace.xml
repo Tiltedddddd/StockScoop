@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6028ab7-28a7-4a3d-b8f0-636299ecf202" name="Changes" comment="Updated requirements before deploying on render">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e6028ab7-28a7-4a3d-b8f0-636299ecf202" name="Changes" comment="Allow bot to run locally for testing (Decided not to host it yet and only do so after upgrading MVP with better logic, news fetching and an implemented database.)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -265,7 +263,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751278350340</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Allow bot to run locally for testing">
+      <option name="closed" value="true" />
+      <created>1751279396396</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1751279396396</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Allow bot to run locally for testing (Decided not to host it yet and only do so after upgrading MVP with better logic, news fetching and an implemented database.)">
+      <option name="closed" value="true" />
+      <created>1751279991275</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1751279991275</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,6 +309,8 @@
     <MESSAGE value="Fixed IDE Warnings" />
     <MESSAGE value="Changed how i import my telegram bot token to securely deploy project to render" />
     <MESSAGE value="Updated requirements before deploying on render" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated requirements before deploying on render" />
+    <MESSAGE value="Allow bot to run locally for testing" />
+    <MESSAGE value="Allow bot to run locally for testing (Decided not to host it yet and only do so after upgrading MVP with better logic, news fetching and an implemented database.)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Allow bot to run locally for testing (Decided not to host it yet and only do so after upgrading MVP with better logic, news fetching and an implemented database.)" />
   </component>
 </project>
