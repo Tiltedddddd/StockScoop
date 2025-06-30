@@ -1,9 +1,11 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
-from config import TELEGRAM_BOT_TOKEN
 from apscheduler.schedulers.background import BackgroundScheduler
 import asyncio
 import datetime
+import os
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+
 
 from news import get_news_for_ticker
 from logic import analyze_news
@@ -115,7 +117,7 @@ if __name__ == "__main__":
     scheduler = BackgroundScheduler()
 
     # Run daily at 8AM
-    scheduler.add_job(lambda: asyncio.run(send_daily_update(app.bot)), "cron", hour=7) # type: ignore
+    scheduler.add_job(lambda: asyncio.run(send_daily_update(app.bot)), "cron", hour=7)# type: ignore
 
     scheduler.start()
     print("Scheduler started...")
