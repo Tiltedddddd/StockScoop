@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6028ab7-28a7-4a3d-b8f0-636299ecf202" name="Changes" comment="Allow bot to run locally for testing (Decided not to host it yet and only do so after upgrading MVP with better logic, news fetching and an implemented database.)" />
+    <list default="true" id="e6028ab7-28a7-4a3d-b8f0-636299ecf202" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tickers.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/tickers.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,7 +283,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751279991275</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Allow bot to run locally for testing (Decided not to host it yet and only do so after upgrading MVP with better logic, news fetching and an implemented database.)">
+      <option name="closed" value="true" />
+      <created>1751280086531</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1751280086531</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1751280220939</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1751280220939</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,6 +331,7 @@
     <MESSAGE value="Updated requirements before deploying on render" />
     <MESSAGE value="Allow bot to run locally for testing" />
     <MESSAGE value="Allow bot to run locally for testing (Decided not to host it yet and only do so after upgrading MVP with better logic, news fetching and an implemented database.)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Allow bot to run locally for testing (Decided not to host it yet and only do so after upgrading MVP with better logic, news fetching and an implemented database.)" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
 </project>
