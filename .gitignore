@@ -7,3 +7,6 @@ __pycache__/
 
 # IDE junk stuff
 .idea/
+
+# Ignore Windows system files
+desktop.ini
